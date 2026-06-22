@@ -65,3 +65,80 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+// HERO TEXT ROTATOR
+const rotators = document.querySelectorAll("[data-rotator]");
+
+rotators.forEach((rotator) => {
+  const words = rotator.querySelectorAll(".rotator-word");
+  let index = 0;
+
+  setInterval(() => {
+    words[index].classList.remove("is-active");
+    index = (index + 1) % words.length;
+    words[index].classList.add("is-active");
+  }, 1600);
+});
+
+// HERO TERMINAL TYPING (LOOP)
+const terminal = document.querySelector("[data-terminal]");
+if (terminal) {
+  const typeLines = [
+    "npm run build",
+    "git push origin main",
+    "deploy --prod",
+  ];
+
+  const outLines = [
+    "✔ build successful",
+    "✔ pushed to GitHub",
+    "✔ live at gridforge.studio",
+  ];
+
+  const typeEls = terminal.querySelectorAll("[data-type-line]");
+  const outEls = terminal.querySelectorAll("[data-out-line]");
+
+  let line = 0;
+  let char = 0;
+
+  const typeSpeed = 45;
+  const lineDelay = 700;
+  const loopDelay = 1800;
+
+  function resetTerminal() {
+    typeEls.forEach((el) => (el.textContent = ""));
+    outEls.forEach((el) => (el.textContent = ""));
+    line = 0;
+    char = 0;
+  }
+
+  function type() {
+    if (line >= typeLines.length) {
+      setTimeout(() => {
+        resetTerminal();
+        type();
+      }, loopDelay);
+      return;
+    }
+
+    const current = typeLines[line];
+    const el = typeEls[line];
+
+    if (char < current.length) {
+      el.textContent += current.charAt(char);
+      char++;
+      setTimeout(type, typeSpeed);
+    } else {
+      setTimeout(() => {
+        if (outEls[line]) {
+          outEls[line].textContent = outLines[line];
+        }
+        line++;
+        char = 0;
+        setTimeout(type, lineDelay);
+      }, 300);
+    }
+  }
+
+  setTimeout(type, 600);
+}
