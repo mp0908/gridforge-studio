@@ -1,28 +1,40 @@
 # GridForge Studio
 
-Web sajtovi po meri vašeg biznisa.
+Moderni, brzi i pouzdani web sajtovi za mali i srednji biznis.
 
 ---
 
 ## O projektu
 
-GridForge Studio je web studio fokusiran na dizajn i razvoj modernih, brzih i funkcionalnih web sajtova.
+**GridForge Studio** je web studio fokusiran na dizajn i razvoj savremenih web sajtova koji imaju jasan cilj — da budu brzi, pregledni i korisni u realnom poslovnom okruženju.
 
-Cilj ovog repozitorijuma je izrada zvaničnog landing sajta studija i osnova za buduće projekte i case study stranice.
+Ovaj repozitorijum predstavlja:
+- zvanični **landing sajt GridForge Studija**
+- centralni **portfolio hub**
+- osnovu za buduće **case study** i projektne stranice
+
+Svi projekti su razvijeni sa fokusom na performanse, pristupačnost i čitljiv kod, bez nepotrebnih frameworka.
 
 ---
 
 ## Tehnologije
 
-- HTML5
-- CSS3
-- JavaScript (vanilla)
-- PHP
-- MYSQL DB
-- Claude x Codex AI assistant
+Korišćene tehnologije i alati:
+
+- **HTML5** — semantička i pristupačna struktura
+- **CSS3** — custom layout, responsive dizajn
+- **JavaScript (Vanilla)** — interakcije i animacije
+- **PHP** — osnovna serverska logika (po potrebi)
+- **MySQL** — baza podataka (po potrebi)
+- **AI asistenti (Claude, Codex)** — pomoć u refaktoru, tekstu i optimizaciji
+
+> Fokus je na čistom, održivom i framework-free kodu.
+
 ---
 
 ## Struktura projekta
+
+```text
 gridforge-studio/
 ├── index.html
 ├── assets/
