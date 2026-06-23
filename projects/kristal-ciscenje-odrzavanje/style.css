@@ -1306,3 +1306,122 @@ h3 {
     animation: none;
   }
 }
+
+/* ---------- Custom scrollbar ---------- */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--jade) var(--cloud);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cloud);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--jade);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jade-dark);
+}
+
+/* ---------- Back to portfolio ---------- */
+
+.gf-back-link {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px 10px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), background 200ms ease;
+}
+
+.gf-back-link:hover,
+.gf-back-link:focus-visible {
+  transform: translateX(-3px);
+  box-shadow: var(--shadow-md);
+  background: #ffffff;
+}
+
+.gf-back-link:focus-visible {
+  outline: 2px solid var(--jade);
+  outline-offset: 2px;
+}
+
+.gf-back-link svg {
+  width: 16px;
+  height: 16px;
+  color: var(--jade);
+  flex-shrink: 0;
+}
+
+@media (max-width: 360px) {
+  .gf-back-link span { display: none; }
+  .gf-back-link { padding: 10px; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 479px) {
+  .hero-trust {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero-trust-divider { display: none; }
+
+  .hero-trust-item {
+    min-width: calc(50% - 7px);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card.wide {
+    grid-column: span 1;
+  }
+
+  .service-card.wide .service-media {
+    aspect-ratio: 16 / 11;
+  }
+}

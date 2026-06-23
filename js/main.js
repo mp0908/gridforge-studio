@@ -142,3 +142,232 @@ if (terminal) {
 
   setTimeout(type, 600);
 }
+
+(function () {
+  'use strict';
+
+  var IFRAME_WIDTH = 1280;
+
+  function scaleIframes() {
+    var viewports = document.querySelectorAll('.iframe-viewport');
+    viewports.forEach(function (vp) {
+      var containerWidth = vp.offsetWidth;
+      if (!containerWidth) return;
+      var scale = containerWidth / IFRAME_WIDTH;
+      var iframe = vp.querySelector('iframe');
+      if (!iframe) return;
+      iframe.style.transform = 'scale(' + scale + ')';
+      /* Adjust the viewport height so it shows a proportional slice */
+      var iframeNativeHeight = parseInt(iframe.style.height || iframe.getAttribute('height') || 900, 10);
+      vp.style.height = Math.round(iframeNativeHeight * scale) + 'px';
+    });
+  }
+
+  /* Run on load */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scaleIframes);
+  } else {
+    scaleIframes();
+  }
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(scaleIframes, 120);
+  });
+
+  /* Re-run after each iframe loads so height is correct */
+  document.querySelectorAll('.iframe-viewport iframe').forEach(function (iframe) {
+    iframe.addEventListener('load', scaleIframes);
+  });
+})();
+
+/* =============================================================
+   contact-anim.js
+   Dodati u main.js ili uključiti kao poseban fajl:
+     <script src="js/contact-anim.js"></script>
+   ============================================================= */
+
+(function () {
+  'use strict';
+
+  /* ── helpers ── */
+  function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
+  function qsa(sel, ctx) { return (ctx || document).querySelectorAll(sel); }
+
+  /* ── 1. Typewriter heading ── */
+  function initTypedHeading() {
+    var el = qs('[data-typed-heading]');
+    if (!el) return;
+
+    var phrases = [
+      'treba čvrstu web osnovu?',
+      'želi više online poziva?',
+      'raste i treba novi sajt?',
+      'tek kreće sa online prisustvom?'
+    ];
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var deleting = false;
+    var pauseMs = 2200;
+    var typeMs = 48;
+    var deleteMs = 24;
+
+    function tick() {
+      var phrase = phrases[phraseIndex];
+      if (!deleting) {
+        charIndex++;
+        el.textContent = phrase.slice(0, charIndex);
+        if (charIndex === phrase.length) {
+          deleting = true;
+          setTimeout(tick, pauseMs);
+          return;
+        }
+      } else {
+        charIndex--;
+        el.textContent = phrase.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(tick, 320);
+          return;
+        }
+      }
+      setTimeout(tick, deleting ? deleteMs : typeMs);
+    }
+
+    /* Start after a short delay so the section is in view */
+    setTimeout(tick, 600);
+  }
+
+  /* ── 2. Stagger form fields when section enters viewport ── */
+  function initFieldReveal() {
+    var fields = qsa('[data-ct-field]');
+    if (!fields.length) return;
+
+    var section = qs('.contact-section');
+    if (!section) return;
+
+    var revealed = false;
+
+    function revealFields() {
+      if (revealed) return;
+      var rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.82) {
+        revealed = true;
+        fields.forEach(function (field, i) {
+          setTimeout(function () {
+            field.classList.add('is-visible');
+          }, 120 + i * 110);
+        });
+      }
+    }
+
+    window.addEventListener('scroll', revealFields, { passive: true });
+    revealFields();
+  }
+
+  /* ── 3. Typewriter intro line ── */
+  function initTerminalIntro() {
+    var el = qs('[data-ct-type]');
+    if (!el) return;
+    var text = el.getAttribute('data-ct-type');
+    var i = 0;
+
+    function type() {
+      if (i <= text.length) {
+        el.textContent = text.slice(0, i);
+        i++;
+        setTimeout(type, 38);
+      }
+    }
+
+    var section = qs('.contact-section');
+    if (!section) { type(); return; }
+
+    var started = false;
+    function check() {
+      if (started) return;
+      var r = section.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.9) {
+        started = true;
+        setTimeout(type, 300);
+      }
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+  }
+
+  /* ── 4. Chip selector ── */
+  function initChips() {
+    qsa('.ct-chips').forEach(function (group) {
+      var hidden = qs('[data-chip-value]', group.closest('.ct-field'));
+      qsa('[data-chip]', group).forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          qsa('[data-chip]', group).forEach(function (c) {
+            c.classList.remove('is-active');
+          });
+          chip.classList.add('is-active');
+          if (hidden) hidden.value = chip.textContent.trim();
+        });
+      });
+    });
+  }
+
+  /* ── 5. Form submit → open mail client ── */
+  function initForm() {
+    var form = qs('[data-ct-form]');
+    var success = qs('[data-ct-success]');
+    var statusEl = qs('[data-ct-status]');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var ime    = (form.elements['ime']    && form.elements['ime'].value.trim())    || '';
+      var email  = (form.elements['email']  && form.elements['email'].value.trim())  || '';
+      var tip    = (form.elements['tip']    && form.elements['tip'].value.trim())    || '';
+      var poruka = (form.elements['poruka'] && form.elements['poruka'].value.trim()) || '';
+
+      var body = [
+        'Ime: ' + ime,
+        'Email: ' + email,
+        'Tip projekta: ' + tip,
+        '',
+        poruka
+      ].join('\n');
+
+      var mailto =
+        'mailto:milospetrovic9034@gmail.com' +
+        '?subject=' + encodeURIComponent('Upit za projekat — ' + (tip || 'Opšte')) +
+        '&body='    + encodeURIComponent(body);
+
+      window.location.href = mailto;
+
+      if (statusEl) { statusEl.textContent = 'sent ✓'; }
+      if (success)  {
+        form.style.opacity = '0';
+        form.style.pointerEvents = 'none';
+        setTimeout(function () {
+          form.style.display = 'none';
+          success.classList.add('is-visible');
+        }, 300);
+      }
+    });
+  }
+
+  /* ── init ── */
+  function init() {
+    initTypedHeading();
+    initTerminalIntro();
+    initFieldReveal();
+    initChips();
+    initForm();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

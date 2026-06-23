@@ -1233,3 +1233,116 @@ h3 {
     display: none;
   }
 }
+
+/* ---------- Custom scrollbar ---------- */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--flush) var(--cream);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--flush);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--flush-deep);
+}
+
+/* ---------- Back to portfolio ---------- */
+
+.gf-back-link {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px 10px 10px;
+  font-family: Manrope, ui-sans-serif, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), background 200ms ease;
+}
+
+.gf-back-link:hover,
+.gf-back-link:focus-visible {
+  transform: translateX(-3px);
+  box-shadow: var(--shadow-md);
+  background: #ffffff;
+}
+
+.gf-back-link:focus-visible {
+  outline: 2.5px solid var(--plum);
+  outline-offset: 2px;
+}
+
+.gf-back-link svg {
+  width: 16px;
+  height: 16px;
+  color: var(--flush-deep);
+  flex-shrink: 0;
+}
+
+@media (max-width: 360px) {
+  .gf-back-link span { display: none; }
+  .gf-back-link { padding: 10px; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 479px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .appointment-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 20px;
+  }
+
+  .swatch-strip {
+    height: 28vh;
+    min-height: 160px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+  .service-row {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid img:first-child {
+    transform: none;
+  }
+}

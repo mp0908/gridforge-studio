@@ -17,17 +17,20 @@ Cilj ovog repozitorijuma je izrada zvaničnog landing sajta studija i osnova za 
 - HTML5
 - CSS3
 - JavaScript (vanilla)
-
+- PHP
+- MYSQL DB
+- Claude x Codex AI assistant
 ---
 
 ## Struktura projekta
-
-```text
 gridforge-studio/
 ├── index.html
 ├── assets/
 │   ├── images/
+│   │   ├── GHLogo.png
+│   │   └── slanatortabg.png
 │   └── icons/
+│       └── gridforge-mark.svg
 ├── css/
 │   ├── reset.css
 │   └── style.css
@@ -38,3 +41,22 @@ gridforge-studio/
 │   ├── services.html
 │   └── contact.html
 └── projects/
+    ├── kristal-ciscenje-odrzavanje/
+    │   ├── assets/
+    │   │   └── kristal-logo.png
+    │   ├── index.html
+    │   ├── script.js
+    │   └── style.css
+    ├── nails-by-tea/
+    │   ├── index.html
+    │   ├── kontakt.html
+    │   ├── o-nama.html
+    │   ├── projekti.html
+    │   ├── script.js
+    │   └── style.css
+    └── slana-torta-bySneza/
+        ├── css/
+        │   └── style.css
+        ├── js/
+        │   └── main.js
+        └── index.html
