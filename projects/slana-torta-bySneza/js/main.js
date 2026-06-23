@@ -432,10 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     draw();
   }
-
-  /* ============================================================
-     TICKER duplicate for seamless loop
-     ============================================================ */
+  
   const track = document.querySelector('.ticker-track');
   if (track) {
     const clone = track.cloneNode(true);
