@@ -5,28 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kristal Čišćenje i Održavanje pruža profesionalno čišćenje poslovnih prostora, kuća, stanova, garaža i objekata."
+      content="Kristal Čišćenje i Održavanje — profesionalno čišćenje poslovnih prostora, kuća, stanova, garaža i objekata u Beogradu."
     />
     <title>Kristal Čišćenje i Održavanje | Profesionalna čistoća za svaki prostor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../css/reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
+
     <header class="topbar" data-header>
       <div class="topbar-strip">
-        <span>Radnim danima 08-18h BEOGRAD</span>
+        <span>Radnim danima 08–18h · Beograd i okolina</span>
         <a href="tel:+381601234567">+381 60 123 4567</a>
       </div>
       <div class="nav-wrap">
-        <a class="brand" href="#hero" aria-label="Kristal Čišćenje i Održavanje početna">
-          <img src="assets/kristal-logo.png" alt="Kristal Čišćenje i Održavanje" />
+        <a class="brand" href="#vrh" aria-label="Kristal Čišćenje i Održavanje — početna">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 3L35 12V28L20 37L5 28V12L20 3Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 3V37M5 12L35 28M35 12L5 28" stroke="currentColor" stroke-width="1" opacity="0.45"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>Kristal</strong>
+            <em>Čišćenje &amp; Održavanje</em>
+          </span>
         </a>
 
         <button class="nav-toggle" type="button" aria-label="Otvori navigaciju" aria-expanded="false" data-nav-toggle>
@@ -36,105 +46,155 @@
         </button>
 
         <nav class="site-nav" aria-label="Glavna navigacija" data-nav>
-          <a href="#services">Usluge</a>
-          <a href="#about">O nama</a>
-          <a href="#process">Proces</a>
-          <a href="#contact">Kontakt</a>
-          <a class="nav-cta" href="#contact" data-scroll-target>Zakažite</a>
+          <a href="#usluge">Usluge</a>
+          <a href="#o-nama">O nama</a>
+          <a href="#proces">Proces</a>
+          <a href="#kontakt">Kontakt</a>
+          <a class="nav-cta" href="#kontakt" data-scroll-target>Zakažite termin</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="hero">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="container hero-content reveal">
-          <p class="eyebrow">Profesionalni servis za B2B i B2C klijente</p>
-          <h1>Kristal Čišćenje i Održavanje</h1>
-          <p class="hero-lead">Čist prostor, jednostavan dogovor.</p>
-          <p class="hero-text">
-            Čišćenje poslovnih prostora, kuća, stanova, garaža i objekata u Beogradu.
-            Javite nam šta treba da se očisti, a mi predlažemo termin i sledeći korak.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact" data-scroll-target>Zakažite čišćenje</a>
-            <a class="btn btn-light" href="tel:+381601234567">Pozovite nas</a>
+      <section class="hero" id="vrh">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Profesionalan servis · B2B &amp; B2C</p>
+            <h1>Prostor koji<br /><span class="hero-highlight">blista</span> kad ga<br />prepustite nama.</h1>
+            <p class="hero-lead">
+              Čišćenje poslovnih prostora, kuća, stanova, garaža i objekata u Beogradu —
+              javite nam šta treba da se očisti, a mi predlažemo termin i sledeći korak.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#kontakt" data-scroll-target>
+                <span>Zakažite čišćenje</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="tel:+381601234567">Pozovite nas</a>
+            </div>
+            <div class="hero-trust">
+              <div class="hero-trust-item">
+                <strong>5</strong>
+                <span>ključnih usluga</span>
+              </div>
+              <div class="hero-trust-divider" aria-hidden="true"></div>
+              <div class="hero-trust-item">
+                <strong>24h</strong>
+                <span>odgovor na upit</span>
+              </div>
+              <div class="hero-trust-divider" aria-hidden="true"></div>
+              <div class="hero-trust-item">
+                <strong>100%</strong>
+                <span>dogovoren obim rada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-wipe>
+            <img
+              class="hero-photo"
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=82"
+              alt="Profesionalno čišćenje poslovnog prostora u Beogradu"
+            />
+            <div class="hero-wipe-mask" data-wipe-mask aria-hidden="true"></div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Pre vs. posle, vidljivo odmah</span>
+            </div>
           </div>
         </div>
+        <button class="scroll-cue" type="button" data-scroll-target-fn aria-label="Pomeri se na usluge">
+          <span>Otkrijte usluge</span>
+          <i aria-hidden="true"></i>
+        </button>
       </section>
 
-      <section class="section intro-band">
-        <div class="container stat-grid">
-          <div class="stat reveal">
-            <strong>5</strong>
-            <span>ključnih usluga</span>
-          </div>
-          <div class="stat reveal reveal-delay-1">
-            <strong>24h</strong>
-            <span>za odgovor na upit</span>
-          </div>
-          <div class="stat reveal reveal-delay-2">
-            <strong>B2B + B2C</strong>
-            <span>rad sa firmama i domaćinstvima</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section services-section" id="services">
+      <section class="section usluge-section" id="usluge">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow">Usluge</p>
-            <h2>Praktične usluge čišćenja za Beograd i okolinu.</h2>
+            <h2>Pet uslova za <span class="underline-accent">čist prostor</span>, bez improvizacije.</h2>
+            <p class="section-lead">
+              Svaka usluga ima jasan obim rada i opremu prilagođenu prostoru — od kancelarije do podruma.
+            </p>
           </div>
 
           <div class="service-grid">
-            <article class="service-card reveal">
-              <img
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
-                alt="Profesionalno čišćenje poslovnog prostora"
-              />
-              <div>
-                <h3>Čišćenje poslovnih prostora</h3>
+            <article class="service-card reveal" data-service>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
+                  alt="Profesionalno čišćenje poslovnog prostora"
+                  loading="lazy"
+                />
+                <div class="service-media-wipe" aria-hidden="true"></div>
+              </div>
+              <div class="service-body">
+                <span class="service-tag">Poslovni prostori</span>
+                <h3>Čišćenje kancelarija i lokala</h3>
                 <p>Održavanje kancelarija, lokala, ordinacija i prostora sa redovnim prometom ljudi.</p>
               </div>
             </article>
-            <article class="service-card reveal reveal-delay-1">
-              <img
-                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80"
-                alt="Čišćenje doma"
-              />
-              <div>
+
+            <article class="service-card reveal reveal-delay-1" data-service>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80"
+                  alt="Čišćenje stana"
+                  loading="lazy"
+                />
+                <div class="service-media-wipe" aria-hidden="true"></div>
+              </div>
+              <div class="service-body">
+                <span class="service-tag">Domaćinstva</span>
                 <h3>Čišćenje stanova i kuća</h3>
                 <p>Detaljno čišćenje privatnih prostora po dogovorenom terminu i obimu rada.</p>
               </div>
             </article>
-            <article class="service-card reveal reveal-delay-2">
-              <img
-                src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=900&q=80"
-                alt="Dubinsko čišćenje površina"
-              />
-              <div>
+
+            <article class="service-card reveal reveal-delay-2" data-service>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=900&q=80"
+                  alt="Dubinsko čišćenje površina"
+                  loading="lazy"
+                />
+                <div class="service-media-wipe" aria-hidden="true"></div>
+              </div>
+              <div class="service-body">
+                <span class="service-tag">Dubinski tretman</span>
                 <h3>Dubinsko čišćenje</h3>
                 <p>Temeljno tretiranje površina kojima je potrebno više pažnje i profesionalna oprema.</p>
               </div>
             </article>
-            <article class="service-card reveal">
-              <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
-                alt="Čišćenje garaže i pomoćnih prostora"
-              />
-              <div>
-                <h3>Čišćenje garaža i podruma</h3>
+
+            <article class="service-card reveal" data-service>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
+                  alt="Čišćenje garaže i pomoćnih prostora"
+                  loading="lazy"
+                />
+                <div class="service-media-wipe" aria-hidden="true"></div>
+              </div>
+              <div class="service-body">
+                <span class="service-tag">Pomoćni prostori</span>
+                <h3>Garaže i podrumi</h3>
                 <p>Sređivanje zahtevnijih prostora uz organizovan i efikasan pristup.</p>
               </div>
             </article>
-            <article class="service-card wide reveal reveal-delay-1">
-              <img
-                src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80"
-                alt="Održavanje objekta i zajedničkog prostora"
-              />
-              <div>
+
+            <article class="service-card wide reveal reveal-delay-1" data-service>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80"
+                  alt="Održavanje objekta i zajedničkog prostora"
+                  loading="lazy"
+                />
+                <div class="service-media-wipe" aria-hidden="true"></div>
+              </div>
+              <div class="service-body">
+                <span class="service-tag">Redovan ugovor</span>
                 <h3>Održavanje objekata</h3>
                 <p>Redovno održavanje zajedničkih i poslovnih prostora prema rasporedu koji odgovara objektu.</p>
               </div>
@@ -143,55 +203,59 @@
         </div>
       </section>
 
-      <section class="section about-section" id="about">
+      <section class="section o-nama-section" id="o-nama">
         <div class="container image-text">
           <div class="image-stack reveal">
             <img
               class="main-photo"
               src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1000&q=80"
-              alt="Sredstva i oprema za čišćenje"
+              alt="Sredstva i oprema za profesionalno čišćenje"
             />
+            <div class="image-stat-card">
+              <strong>+ Iskustvo</strong>
+              <span>Dugogodišnji rad sa firmama i domaćinstvima u Beogradu</span>
+            </div>
           </div>
           <div class="content-block reveal reveal-delay-1">
             <p class="eyebrow">O nama</p>
-            <h2>Servisna firma koja radi uredno, tačno i bez praznih obećanja.</h2>
+            <h2>Servisna firma koja radi <span class="underline-accent">uredno, tačno</span> i bez praznih obećanja.</h2>
             <p>
               Kristal Čišćenje i Održavanje radi na teritoriji Beograda i fokusirano je na prostore gde se rezultat vidi odmah:
               kancelarije, stanove, kuće, garaže, podrume i objekte kojima treba redovna briga.
             </p>
             <p>
-              Pre svakog posla dogovaramo adresu, obim rada, termin i prioritetne zone. Cilj je jednostavan:
+              Pre svakog posla dogovaramo adresu, obim rada, termin i prioritetne zone. Cilj je jednostavan —
               da prostor bude čist, uredan i spreman za korišćenje.
             </p>
-            <div class="check-list">
-              <span>Pouzdana ekipa</span>
-              <span>Tačnost i dogovor</span>
-              <span>Profesionalna oprema</span>
-              <span>Dugogodišnje iskustvo</span>
-            </div>
+            <ul class="check-list">
+              <li><span class="check-icon">✓</span>Pouzdana ekipa</li>
+              <li><span class="check-icon">✓</span>Tačnost i dogovor</li>
+              <li><span class="check-icon">✓</span>Profesionalna oprema</li>
+              <li><span class="check-icon">✓</span>Dugogodišnje iskustvo</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="section process-section" id="process">
+      <section class="section proces-section" id="proces">
         <div class="container">
           <div class="section-heading centered reveal">
             <p class="eyebrow">Proces</p>
-            <h2>Dogovor za čišćenje u Beogradu u nekoliko koraka.</h2>
+            <h2>Dogovor u Beogradu, u <span class="underline-accent">tri jasna koraka</span>.</h2>
           </div>
           <div class="process-grid">
             <article class="process-step reveal">
-              <span>1</span>
+              <span class="process-index">01</span>
               <h3>Pošaljete upit</h3>
               <p>Navedete tip prostora, lokaciju, približnu kvadraturu i željeni termin.</p>
             </article>
             <article class="process-step reveal reveal-delay-1">
-              <span>2</span>
+              <span class="process-index">02</span>
               <h3>Dogovorimo obim</h3>
               <p>Preciziramo šta se čisti, koliko traje i šta je prioritet za taj izlazak.</p>
             </article>
             <article class="process-step reveal reveal-delay-2">
-              <span>3</span>
+              <span class="process-index">03</span>
               <h3>Ekipa dolazi</h3>
               <p>Dolazimo u dogovorenom terminu sa opremom i jasnim planom rada.</p>
             </article>
@@ -205,26 +269,35 @@
             <span>Treba vam čišćenje uskoro?</span>
             <strong>Najbrži dogovor je telefonom ili kratkim upitom.</strong>
           </div>
-          <a class="btn btn-light" href="tel:+381601234567">Pozovite odmah</a>
+          <a class="btn btn-light" href="tel:+381601234567">
+            <span>Pozovite odmah</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
+      <section class="section kontakt-section" id="kontakt">
         <div class="container contact-layout">
           <div class="contact-copy reveal">
             <p class="eyebrow">Kontakt</p>
             <h2>Zakažite termin za Beograd ili zatražite procenu.</h2>
             <p>
-              Forma je kratka i namenjena brzom dogovoru. Napišite koji prostor treba očistiti
+              Forma je kratka i namenjena brzom dogovoru. Napišite koji prostor treba očistiti,
               u kom delu Beograda se nalazi i kada vam odgovara termin.
             </p>
             <div class="direct-contact">
-              <a href="tel:+381601234567">+381 60 123 4567</a>
-              <a href="mailto:kontakt@kristalciscenje.rs">kontakt@kristalciscenje.rs</a>
+              <a href="tel:+381601234567">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.7 3.6.7.6 0 1 .5 1 1.1v3.5c0 .6-.5 1.1-1.1 1.1C10.4 21.5 2.5 13.6 2.5 4.1 2.5 3.5 3 3 3.6 3h3.5c.6 0 1.1.5 1.1 1 0 1.3.2 2.5.7 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6"/></svg>
+                +381 60 123 4567
+              </a>
+              <a href="mailto:kontakt@kristalciscenje.rs">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+                kontakt@kristalciscenje.rs
+              </a>
             </div>
           </div>
 
-          <form class="contact-form reveal reveal-delay-1" action="#" method="post">
+          <form class="contact-form reveal reveal-delay-1" action="#" method="post" data-contact-form>
             <label>
               Ime i prezime
               <input type="text" name="name" placeholder="Vaše ime" required />
@@ -248,36 +321,40 @@
               Poruka
               <textarea name="message" rows="4" placeholder="Opština, kvadratura, željeni termin..."></textarea>
             </label>
-            <button class="btn btn-primary" type="submit">Pošalji upit</button>
+            <button class="btn btn-primary btn-block" type="submit">
+              <span>Pošalji upit</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </form>
         </div>
       </section>
     </main>
 
     <a class="floating-call" href="tel:+381601234567" aria-label="Pozovite Kristal Čišćenje i Održavanje">
-      <span>☎</span>
-      Poziv
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.7 3.6.7.6 0 1 .5 1 1.1v3.5c0 .6-.5 1.1-1.1 1.1C10.4 21.5 2.5 13.6 2.5 4.1 2.5 3.5 3 3 3.6 3h3.5c.6 0 1.1.5 1.1 1 0 1.3.2 2.5.7 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.8"/></svg>
+      <span>Poziv</span>
     </a>
 
     <footer class="site-footer">
       <div class="container footer-layout">
-        <div>
-          <a class="footer-brand" href="#hero">Kristal Čišćenje i Održavanje</a>
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="#vrh">Kristal Čišćenje i Održavanje</a>
           <p>Čišćenje prostora u Beogradu uz brz i jasan dogovor.</p>
         </div>
         <div class="footer-links">
-          <a href="#services">Usluge</a>
-          <a href="#contact">Kontakt</a>
+          <a href="#usluge">Usluge</a>
+          <a href="#kontakt">Kontakt</a>
           <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="" />
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 9h2.5V6H14c-1.9 0-3.5 1.6-3.5 3.5V11H8.5v3H10.5v6h3v-6h2.3l.4-3H13.5v-1.6c0-.5.3-.9.9-.9Z" fill="currentColor"/></svg>
           </a>
           <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="" />
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
           </a>
           <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="" />
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5v6M8 7.8v.2M12 16.5v-3.6c0-1.2.8-2.1 2-2.1s2 .9 2 2.1v3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </a>
         </div>
+        <p class="footer-copy">© 2026 Kristal Čišćenje i Održavanje. Sva prava zadržana.</p>
       </div>
     </footer>
 

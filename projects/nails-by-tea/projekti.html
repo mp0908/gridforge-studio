@@ -3,32 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Galerija radova Nails by Tea studija u Rumi — manikir, gel lak i nail art detalji."
+    />
     <title>Projekti | Nails by Tea</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="topbar" data-header><div class="container nav-shell"><a class="brand" href="index.html"><strong>Nails by Tea</strong><span>Lepota u detalju.</span></a><button class="nav-toggle" type="button" aria-label="Otvori navigaciju" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button><nav class="site-nav" aria-label="Glavna navigacija"><a href="index.html">Usluge</a><a class="is-active" href="projekti.html">Projekti</a><a href="o-nama.html">O nama</a><a href="kontakt.html">Kontakt</a><a class="nav-cta" href="kontakt.html">Zakazivanje</a></nav></div></header>
+    <div class="ambient-holo" aria-hidden="true"></div>
+    <div class="drip-cursor" data-cursor aria-hidden="true"></div>
+
+    <header class="topbar" data-header>
+      <div class="container nav-shell">
+        <a class="brand" href="index.html" aria-label="Nails by Tea — početna">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>Nails by Tea</strong>
+            <span>Lepota u detalju</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Otvori navigaciju" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Glavna navigacija">
+          <a href="index.html">Usluge</a>
+          <a class="is-active" href="projekti.html">Projekti</a>
+          <a href="o-nama.html">O nama</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a class="nav-cta" href="kontakt.html">Zakazivanje</a>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <section class="section" style="padding-top: 150px;">
+      <section class="section" style="padding-top: 168px">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow">Projekti</p>
-            <h1>Radovi koji spajaju preciznost, boju i nosiv dizajn.</h1>
-            <p class="lead">Galerija je osmišljena kao portfolio salona u Rumi: uredni oblici, različite dužine i detalji koji pokazuju stil Nails by Tea.</p>
+            <h1 style="font-size: clamp(2.4rem, 6.2vw, 4.4rem); line-height: 1.04; max-width: 760px">
+              Radovi koji spajaju preciznost, boju i <span class="script">nosiv</span> dizajn.
+            </h1>
+            <p class="lead">
+              Galerija je osmišljena kao portfolio salona u Rumi: uredni oblici, različite dužine i detalji koji pokazuju stil Nails by Tea.
+            </p>
           </div>
           <div class="project-grid">
-            <article class="project-card reveal"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=82" alt="French nokti sa elegantnim detaljem" /><div><h3>Soft French</h3><p>Čist oblik, mlečnobela baza i tanka linija za sofisticiran svakodnevni izgled.</p></div></article>
-            <article class="project-card reveal delay-1"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=82" alt="Roze gel lak" /><div><h3>Rose Gloss</h3><p>Roze tonovi sa visokim sjajem, idealni za uredan i ženstven finiš.</p></div></article>
-            <article class="project-card reveal delay-2"><img src="https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=700&q=82" alt="Nail art detalji" /><div><h3>Detail Set</h3><p>Diskretan nail art za klijentkinje koje žele lični pečat bez preopterećenja dizajna.</p></div></article>
+            <article class="project-card reveal">
+              <span class="project-index">01</span>
+              <img
+                src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=82"
+                alt="French nokti sa elegantnim detaljem"
+                loading="lazy"
+              />
+              <div>
+                <h3>Soft French</h3>
+                <p>Čist oblik, mlečnobela baza i tanka linija za sofisticiran svakodnevni izgled.</p>
+              </div>
+            </article>
+            <article class="project-card reveal delay-1">
+              <span class="project-index">02</span>
+              <img
+                src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=82"
+                alt="Roze gel lak"
+                loading="lazy"
+              />
+              <div>
+                <h3>Rose Gloss</h3>
+                <p>Roze tonovi sa visokim sjajem, idealni za uredan i ženstven finiš.</p>
+              </div>
+            </article>
+            <article class="project-card reveal delay-2">
+              <span class="project-index">03</span>
+              <img
+                src="https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=700&q=82"
+                alt="Nail art detalji"
+                loading="lazy"
+              />
+              <div>
+                <h3>Detail Set</h3>
+                <p>Diskretan nail art za klijentkinje koje žele lični pečat bez preopterećenja dizajna.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow" style="color: #ffd5e4">Vidite se u nekom od ovih?</p>
+            <h2>Donesite inspiraciju, <span class="script" style="color: #ffd5e4">mi</span> donosimo preciznost.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="kontakt.html">Zakaži termin</a>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container footer-layout"><a class="footer-brand" href="index.html">Nails by Tea</a><div class="footer-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="kontakt.html">Kontakt</a></div></div></footer>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div>
+          <a class="footer-brand" href="index.html">Nails by Tea</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

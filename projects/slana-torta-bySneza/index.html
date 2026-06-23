@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Slana Torta by Sneža — jedna slana torta, slojevita i unikatna, u srednjoj i velikoj veličini."
+    />
+    <title>Slana Torta by Sneža | Slana torta, sloj po sloj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#order">Idi na poručivanje</a>
+
+    <header class="sc-header" data-header>
+      <div class="sc-header-inner">
+        <a class="sc-brand" href="#top">
+          <span class="sc-brand-mark" aria-hidden="true"></span>
+          Slana Torta by Sneža
+        </a>
+
+        <nav class="sc-nav" aria-label="Glavna navigacija">
+          <a href="#sastojci"><span class="nav-num"></span>Sastojci</a>
+          <a href="#velicine"><span class="nav-num"></span>Veličine</a>
+          <a class="sc-nav-cta" href="#order">Poruči</a>
+        </nav>
+
+        <button
+          class="sc-burger"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="sc-mobile-nav"
+          aria-label="Otvori meni"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="sc-mobile-nav" id="sc-mobile-nav" data-mobile-nav>
+      <nav aria-label="Mobilna navigacija">
+        <a href="#sastojci" data-mobile-link><span class="nav-num">01</span>Sastojci</a>
+        <a href="#velicine" data-mobile-link><span class="nav-num">02</span>Veličine</a>
+        <a href="#order" data-mobile-link><span class="nav-num">03</span>Poruči</a>
+      </nav>
+      <p class="sc-mobile-foot">Slana Torta by Sneža — pravljeno sa ukusom.</p>
+    </div>
+
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="steam steam-1"></div>
+          <div class="steam steam-2"></div>
+          <div class="steam steam-3"></div>
+        </div>
+
+        <div class="hero-inner">
+          <p class="kicker">Jedna torta. Bez kompromisa.</p>
+          <h1 class="hero-title">
+            <span class="line">Slana torta</span>
+            <span class="line line-accent">koja se otkriva</span>
+            <span class="line">sloj po sloj.</span>
+          </h1>
+          <p class="hero-sub">
+            Skrolujte i gledajte kako se naša jedina, unikatna slana torta sastavlja —
+            od korice do poslednjeg premaza. Svaki sloj ima razlog da postoji.
+          </p>
+          <a class="hero-cta" href="#sastojci" data-scroll-target>
+            <span>Pratite sastavljanje</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m0 0-6-6m6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-plate" aria-hidden="true">
+          <svg class="plate-ring" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="150" />
+          </svg>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- ============ BUILDING CAKE (sticky cross-section) ============ -->
+      <section class="builder" id="sastojci" aria-label="Sastojci torte, sloj po sloj">
+        <div class="builder-sticky">
+          <div class="builder-visual" data-builder-visual>
+            <svg
+              class="cake-svg"
+              viewBox="0 0 600 560"
+              role="img"
+              aria-label="Presek slane torte, sloj po sloj"
+            >
+              <defs>
+                <clipPath id="cakeClip">
+                  <rect x="120" y="60" width="360" height="430" rx="14" />
+                </clipPath>
+              </defs>
+
+              <g clip-path="url(#cakeClip)">
+                <!-- layer 6: top glaze/cheese spread (last, topmost) -->
+                <rect class="layer layer-6" x="120" y="60" width="360" height="46" />
+                <!-- layer 5: herbs + roasted pepper -->
+                <rect class="layer layer-5" x="120" y="106" width="360" height="58" />
+                <!-- layer 4: ham + egg -->
+                <rect class="layer layer-4" x="120" y="164" width="360" height="64" />
+                <!-- layer 3: cream cheese filling -->
+                <rect class="layer layer-3" x="120" y="228" width="360" height="58" />
+                <!-- layer 2: spinach + cheese -->
+                <rect class="layer layer-2" x="120" y="286" width="360" height="64" />
+                <!-- layer 1: base biscuit/crust -->
+                <rect class="layer layer-1" x="120" y="350" width="360" height="140" />
+
+                <!-- texture speckles per layer -->
+                <g class="speckles speckles-6">
+                  <circle cx="170" cy="80" r="4" />
+                  <circle cx="260" cy="90" r="3" />
+                  <circle cx="350" cy="78" r="4" />
+                  <circle cx="430" cy="88" r="3" />
+                </g>
+                <g class="speckles speckles-5">
+                  <circle cx="150" cy="130" r="6" />
+                  <circle cx="230" cy="142" r="5" />
+                  <circle cx="320" cy="125" r="6" />
+                  <circle cx="400" cy="140" r="5" />
+                  <circle cx="455" cy="128" r="5" />
+                </g>
+                <g class="speckles speckles-4">
+                  <rect x="140" y="185" width="34" height="14" rx="6" />
+                  <rect x="210" y="190" width="34" height="14" rx="6" />
+                  <rect x="290" y="183" width="34" height="14" rx="6" />
+                  <rect x="370" y="190" width="34" height="14" rx="6" />
+                  <rect x="430" y="184" width="34" height="14" rx="6" />
+                </g>
+                <g class="speckles speckles-2">
+                  <circle cx="160" cy="310" r="6" />
+                  <circle cx="240" cy="320" r="5" />
+                  <circle cx="330" cy="308" r="6" />
+                  <circle cx="410" cy="318" r="5" />
+                  <circle cx="460" cy="312" r="5" />
+                </g>
+              </g>
+
+              <rect class="cake-outline" x="120" y="60" width="360" height="430" rx="14" />
+
+              <!-- plate -->
+              <ellipse class="plate" cx="300" cy="525" rx="220" ry="20" />
+            </svg>
+          </div>
+
+          <div class="builder-steps">
+            <article class="step" data-step="1">
+              <span class="step-num">01</span>
+              <h3>Korica</h3>
+              <p>Hrskava domaća korica, blago slana osnova koja nosi sve ostale slojeve i daje teksturu pri svakom zalogaju.</p>
+            </article>
+            <article class="step" data-step="2">
+              <span class="step-num">02</span>
+              <h3>Spanać i sir</h3>
+              <p>Topljeni sir i sveži spanać, prepečeni do zlatne arome — prvi sloj koji daje dubinu ukusu.</p>
+            </article>
+            <article class="step" data-step="3">
+              <span class="step-num">03</span>
+              <h3>Krem od sira</h3>
+              <p>Glatki, blago kiseli krem koji povezuje slojeve i drži tortu vlažnom i mekom u sredini.</p>
+            </article>
+            <article class="step" data-step="4">
+              <span class="step-num">04</span>
+              <h3>Šunka i jaje</h3>
+              <p>Kockice domaće šunke i kuvano jaje — sloj koji slanoj torti daje karakter glavnog jela, ne pereca.</p>
+            </article>
+            <article class="step" data-step="5">
+              <span class="step-num">05</span>
+              <h3>Začinsko bilje i paprika</h3>
+              <p>Pečena crvena paprika i mešavina svežeg začinskog bilja za svežinu i blagu dimljenu notu.</p>
+            </article>
+            <article class="step" data-step="6">
+              <span class="step-num">06</span>
+              <h3>Premaz od sira</h3>
+              <p>Finalni, svilenkasti premaz koji zatvara tortu i čini da svaki parče izgleda kao da je upravo isečen.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ONE CAKE STATEMENT ============ -->
+      <section class="statement">
+        <div class="statement-inner">
+          <p class="statement-eyebrow">Bez menija. Bez kompromisa.</p>
+          <h2>
+            Pravimo <span class="statement-highlight">jednu</span> tortu.
+            Onu pravu.
+          </h2>
+          <p class="statement-text">
+            Nema deset varijanti i nema "probaj pa vidi". Slana Torta by Sneža je jedan recept,
+            doveden do kraja — isti ukus, ista preciznost, svaki put. Jedina odluka koja
+            vam preostaje je veličina parčeta.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ SIZE PICKER ============ -->
+      <section class="sizes" id="velicine">
+        <div class="sizes-inner">
+          <p class="kicker kicker-dark">Veličine</p>
+          <h2>Ista torta. Dve veličine.</h2>
+          <p class="sizes-sub">Birate koliko stomaka hranite — recept i slojevi ostaju potpuno isti.</p>
+
+          <div class="size-cards" data-size-group role="radiogroup" aria-label="Izbor veličine torte">
+            <button class="size-card is-active" type="button" data-size="medium" role="radio" aria-checked="true">
+              <span class="size-visual size-visual-medium" aria-hidden="true">
+                <svg viewBox="0 0 200 140"><ellipse class="size-plate" cx="100" cy="118" rx="86" ry="12"/><rect class="size-slice" x="40" y="36" width="120" height="74" rx="8"/></svg>
+              </span>
+              <span class="size-name">Srednja</span>
+              <span class="size-detail">Ø 20 cm · za 4–5 osoba</span>
+              <span class="size-pick">Izabrano</span>
+            </button>
+
+            <button class="size-card" type="button" data-size="large" role="radio" aria-checked="false">
+              <span class="size-visual size-visual-large" aria-hidden="true">
+                <svg viewBox="0 0 200 140"><ellipse class="size-plate" cx="100" cy="118" rx="86" ry="12"/><rect class="size-slice" x="24" y="22" width="152" height="88" rx="8"/></svg>
+              </span>
+              <span class="size-name">Velika</span>
+              <span class="size-detail">Ø 28 cm · za 8–10 osoba</span>
+              <span class="size-pick">Izabrano</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ORDER ============ -->
+<section class="order" id="order">
+  <div class="order-inner">
+    <div class="order-copy">
+      <p class="kicker kicker-dark">Poručivanje</p>
+      <h2>Spremni za vašu Slanu Tortu?</h2>
+      <p>
+        Pišite nam koliko ljudi treba da posluži i kada planirate proslavu, ručak ili
+        poslovni sastanak — javljamo se sa potvrdom i tačnim terminom preuzimanja.
+      </p>
+      <ul class="order-points">
+        <li>Priprema po porudžbini, sveže za vaš datum</li>
+        <li>Preuzimanje ili dogovor za dostavu u okolini</li>
+        <li>Dosledan ukus u svakoj veličini</li>
+      </ul>
+    </div>
+
+    <form class="order-form" data-order-form>
+      <div class="form-row">
+        <label for="name">Ime i prezime</label>
+        <input id="name" name="name" type="text" placeholder="Vaše ime" required />
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Telefon</label>
+        <input id="phone" name="phone" type="tel" placeholder="+381 6x xxx xxxx" required />
+      </div>
+
+      <div class="form-row">
+        <span class="form-label-static">Veličina</span>
+        <div class="form-size-toggle" data-form-size>
+          <button type="button" class="is-active" data-form-size-option="medium">Srednja</button>
+          <button type="button" data-form-size-option="large">Velika</button>
+        </div>
+        <input type="hidden" name="size" data-form-size-value value="medium" />
+      </div>
+
+      <div class="form-row">
+        <label for="note">Poruka</label>
+        <textarea id="note" name="note" rows="3" placeholder="Datum preuzimanja, veličina, dodatne napomene..."></textarea>
+      </div>
+
+      <button class="btn-submit" type="submit">
+        <span>Pošalji upit</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14m0 0-6-6m6 6-6 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <p class="form-success" data-form-success role="status" aria-live="polite">
+        Hvala! Upit je spreman — javićemo se uskoro.
+      </p>
+    </form>
+  </div>
+</section>
+
+    <footer class="sc-footer">
+      <div class="sc-footer-inner">
+        <p>© 2026 Slana Torta by Sneža. Pravljeno sa ukusom.</p>
+        <a href="#top" data-scroll-target>Nazad na vrh</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

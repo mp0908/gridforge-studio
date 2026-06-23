@@ -4,8 +4,9 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const scrollLinks = document.querySelectorAll('a[href^="#"]');
+const scrollCueButtons = document.querySelectorAll("[data-scroll-target-fn]");
 const revealItems = document.querySelectorAll(".reveal");
-const contactForm = document.querySelector(".contact-form");
+const contactForm = document.querySelector("[data-contact-form]");
 
 const closeNavigation = () => {
   document.body.classList.remove("nav-open");
@@ -32,14 +33,35 @@ scrollLinks.forEach((link) => {
   });
 });
 
+scrollCueButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const next = document.getElementById("usluge");
+    next?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
 const updateHeaderState = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 24);
 };
 
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
+
 nav?.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    closeNavigation();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!document.body.classList.contains("nav-open")) {
+    return;
+  }
+
+  const isClickInsideNav = nav?.contains(event.target);
+  const isClickOnToggle = navToggle?.contains(event.target);
+
+  if (!isClickInsideNav && !isClickOnToggle) {
     closeNavigation();
   }
 });
@@ -70,11 +92,12 @@ if ("IntersectionObserver" in window) {
 contactForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const submitButton = contactForm.querySelector('button[type="submit"]');
+  const label = submitButton?.querySelector("span");
 
-  if (!submitButton) {
+  if (!submitButton || !label) {
     return;
   }
 
-  submitButton.textContent = "Upit je spreman za slanje";
+  label.textContent = "Upit je spreman za slanje";
   submitButton.disabled = true;
 });

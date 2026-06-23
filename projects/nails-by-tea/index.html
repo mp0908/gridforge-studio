@@ -3,21 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nails by Tea studio u Rumi za elegantan manikir, gel lak, izlivanje noktiju i profesionalnu negu ruku." />
+    <meta
+      name="description"
+      content="Nails by Tea studio u Rumi za elegantan manikir, gel lak, izlivanje noktiju i profesionalnu negu ruku."
+    />
     <title>Nails by Tea | Lepota u detalju.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="ambient-holo" aria-hidden="true"></div>
+    <div class="drip-cursor" data-cursor aria-hidden="true"></div>
+
     <header class="topbar" data-header>
       <div class="container nav-shell">
-        <a class="brand" href="index.html" aria-label="Nails by Tea početna">
-          <strong>Nails by Tea</strong>
-          <span>Lepota u detalju.</span>
+        <a class="brand" href="index.html" aria-label="Nails by Tea — početna">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>Nails by Tea</strong>
+            <span>Lepota u detalju</span>
+          </span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Otvori navigaciju" aria-expanded="false" data-nav-toggle>
           <span></span><span></span><span></span>
@@ -34,53 +45,95 @@
 
     <main>
       <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Nail studio u Rumi za uredan, ženstven i postojan izgled</p>
-            <h1>Nails by Tea</h1>
-            <p class="hero-text">
-              Lepota u detalju. Profesionalna nega noktiju, precizna obrada i dizajn koji se uklapa u vaš stil,
-              od minimalističkog nude izgleda do elegantnih sezonskih detalja.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="kontakt.html">Zakaži termin</a>
-              <a class="btn btn-light" href="projekti.html">Pogledaj radove</a>
-            </div>
+        <div class="swatch-strip" aria-hidden="true">
+          <span class="swatch"><span class="swatch-sheen"></span></span>
+          <span class="swatch"><span class="swatch-sheen"></span></span>
+          <span class="swatch"><span class="swatch-sheen"></span></span>
+          <span class="swatch"><span class="swatch-sheen"></span></span>
+          <span class="swatch"><span class="swatch-sheen"></span></span>
+          <span class="swatch"><span class="swatch-sheen"></span></span>
+        </div>
+
+        <div class="container hero-content reveal">
+          <div class="hero-eyebrow-wrap">
+            <p class="eyebrow">Nail studio u Rumi</p>
           </div>
-          <aside class="appointment-panel reveal delay-1">
+          <h1>
+            <span>Nails by</span>
+            <span class="script">Tea</span>
+          </h1>
+          <p class="hero-text">
+            Profesionalna nega noktiju, precizna obrada i dizajn koji se uklapa u vaš stil —
+            od minimalističkog nude izgleda do elegantnih sezonskih detalja.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="kontakt.html">Zakaži termin</a>
+            <a class="btn btn-light" href="projekti.html">Pogledaj radove</a>
+          </div>
+
+          <aside class="appointment-panel">
             <strong>Termin po dogovoru</strong>
-            <span>Manikir, gel lak, ojačavanje prirodnih noktiju i nail art u Rumi.</span>
-            <a class="price" href="tel:+381601234567">+381 60 123 4567</a>
+            <span>Manikir · gel lak · nail art</span>
+            <a class="price" href="tel:+381601234567">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.7 3.6.7.6 0 1 .5 1 1.1v3.5c0 .6-.5 1.1-1.1 1.1C10.4 21.5 2.5 13.6 2.5 4.1 2.5 3.5 3 3 3.6 3h3.5c.6 0 1.1.5 1.1 1 0 1.3.2 2.5.7 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6"/></svg>
+              +381 60 123 4567
+            </a>
           </aside>
+        </div>
+
+        <div class="hero-scroll-note" aria-hidden="true">
+          <span>Skroluj</span>
+          <i></i>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="usluge">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow">Usluge</p>
-            <h2>Precizna nega za nokte koji izgledaju uredno iz svakog ugla.</h2>
+            <h2>Precizna nega za nokte koji izgledaju uredno <span class="script">iz svakog ugla</span>.</h2>
           </div>
           <div class="service-list">
             <article class="service-row reveal">
-              <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=900&q=82" alt="Elegantni manikir u salonu" />
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=900&q=82"
+                  alt="Elegantni manikir u salonu"
+                  loading="lazy"
+                />
+              </div>
               <div>
+                <span class="service-tag">Najtraženije</span>
                 <h3>Gel lak</h3>
                 <p>Postojana boja, uredna priprema nokatne ploče i završni sjaj za svakodnevno elegantan izgled.</p>
                 <span class="price">od 2.200 RSD</span>
               </div>
             </article>
             <article class="service-row reveal delay-1">
-              <img src="https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=900&q=82" alt="Nail art detalji na noktima" />
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=900&q=82"
+                  alt="Nail art detalji na noktima"
+                  loading="lazy"
+                />
+              </div>
               <div>
+                <span class="service-tag">Diskretno i čvrsto</span>
                 <h3>Ojačavanje prirodnih noktiju</h3>
                 <p>Diskretna čvrstina i prirodan oblik za klijentkinje koje žele uredne nokte bez preterane dužine.</p>
                 <span class="price">od 2.800 RSD</span>
               </div>
             </article>
             <article class="service-row reveal delay-2">
-              <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=82" alt="Profesionalno izlivanje noktiju" />
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=82"
+                  alt="Profesionalno izlivanje noktiju"
+                  loading="lazy"
+                />
+              </div>
               <div>
+                <span class="service-tag">Oblik po izboru</span>
                 <h3>Izlivanje noktiju</h3>
                 <p>Oblikovanje dužine i forme uz pažljivu arhitekturu nokta, za sofisticiran i dugotrajan rezultat.</p>
                 <span class="price">od 3.600 RSD</span>
@@ -93,12 +146,20 @@
       <section class="section atelier-band">
         <div class="container split">
           <div class="photo-grid reveal">
-            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=82" alt="Detalj roze manikira" />
-            <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&q=82" alt="Nail studio atmosfera" />
+            <img
+              src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=82"
+              alt="Detalj roze manikira"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&q=82"
+              alt="Nail studio atmosfera"
+              loading="lazy"
+            />
           </div>
           <div class="reveal delay-1">
             <p class="eyebrow">Pristup</p>
-            <h2>Mirna atmosfera, čisti alati i detalj koji pravi razliku.</h2>
+            <h2>Mirna atmosfera, čisti alati i <span class="script">detalj</span> koji pravi razliku.</h2>
             <p class="lead">
               Svaki tretman počinje kratkim dogovorom o obliku, dužini, boji i navikama. Cilj je da nokti budu lepi,
               ali i praktični za vaš ritam dana.
@@ -111,7 +172,7 @@
         <div class="container split">
           <div class="reveal">
             <p class="eyebrow">Česta pitanja</p>
-            <h2>Pre termina, najčešće vas zanima ovo.</h2>
+            <h2>Pre termina, najčešće vas zanima <span class="script">ovo</span>.</h2>
           </div>
           <div class="faq-list reveal delay-1">
             <article class="faq-item">
@@ -135,13 +196,24 @@
           </div>
         </div>
       </section>
+
+      <section class="cta">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow" style="color: #ffd5e4">Spremne za promenu?</p>
+            <h2>Zakažite termin i ponesite <span class="script" style="color: #ffd5e4">novu</span> priču na rukama.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="kontakt.html">Zakaži termin</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-layout">
         <div>
           <a class="footer-brand" href="index.html">Nails by Tea</a>
-          <p>Lepota u detalju.</p>
         </div>
         <div class="footer-links">
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>

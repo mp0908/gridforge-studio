@@ -3,35 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nails by Tea — mali, pažljivo vođen nail studio u Rumi posvećen urednoj pripremi i dizajnu koji traje."
+    />
     <title>O nama | Nails by Tea</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="topbar" data-header><div class="container nav-shell"><a class="brand" href="index.html"><strong>Nails by Tea</strong><span>Lepota u detalju.</span></a><button class="nav-toggle" type="button" aria-label="Otvori navigaciju" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button><nav class="site-nav" aria-label="Glavna navigacija"><a href="index.html">Usluge</a><a href="projekti.html">Projekti</a><a class="is-active" href="o-nama.html">O nama</a><a href="kontakt.html">Kontakt</a><a class="nav-cta" href="kontakt.html">Zakazivanje</a></nav></div></header>
+    <div class="ambient-holo" aria-hidden="true"></div>
+    <div class="drip-cursor" data-cursor aria-hidden="true"></div>
+
+    <header class="topbar" data-header>
+      <div class="container nav-shell">
+        <a class="brand" href="index.html" aria-label="Nails by Tea — početna">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>Nails by Tea</strong>
+            <span>Lepota u detalju</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Otvori navigaciju" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Glavna navigacija">
+          <a href="index.html">Usluge</a>
+          <a href="projekti.html">Projekti</a>
+          <a class="is-active" href="o-nama.html">O nama</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a class="nav-cta" href="kontakt.html">Zakazivanje</a>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <section class="section atelier-band" style="padding-top: 150px;">
+      <section class="section atelier-band" style="padding-top: 168px">
         <div class="container split">
-          <img class="portrait reveal" src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&q=82" alt="Enterijer nail studija" />
+          <img
+            class="portrait reveal"
+            src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&q=82"
+            alt="Enterijer nail studija"
+            loading="lazy"
+          />
           <div class="reveal delay-1">
             <p class="eyebrow">O nama</p>
-            <h1>Salon u Rumi u kome se detalji ne preskaču.</h1>
-            <p class="lead">Nails by Tea je mali, pažljivo vođen nail studio u Rumi, posvećen urednoj pripremi, lepom obliku i dizajnu koji traje. Svaki termin je individualan, bez žurbe i bez generičkog pristupa.</p>
+            <h1 style="font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05; max-width: 620px">
+              Salon u Rumi u kome se detalji <span class="script">ne preskaču</span>.
+            </h1>
+            <p class="lead">
+              Nails by Tea je mali, pažljivo vođen nail studio u Rumi, posvećen urednoj pripremi, lepom obliku i
+              dizajnu koji traje. Svaki termin je individualan, bez žurbe i bez generičkog pristupa.
+            </p>
           </div>
         </div>
       </section>
+
       <section class="section">
-        <div class="container values-grid">
-          <article class="value-card reveal"><h3>Higijena</h3><p>Alati i radna površina pripremaju se za svaki tretman, uz čist i organizovan proces rada.</p></article>
-          <article class="value-card reveal delay-1"><h3>Preciznost</h3><p>Posebna pažnja ide obliku, zanokticama, tankom nanosu i završnoj liniji boje.</p></article>
-          <article class="value-card reveal delay-2"><h3>Stil</h3><p>Od neutralnih tonova do detalja u trendu, predlog uvek prilagođavamo klijentkinji.</p></article>
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow">Vrednosti</p>
+            <h2>Ono na čemu ne <span class="script">pravimo</span> kompromis.</h2>
+          </div>
+          <div class="values-grid">
+            <article class="value-card reveal">
+              <h3>Higijena</h3>
+              <p>Alati i radna površina pripremaju se za svaki tretman, uz čist i organizovan proces rada.</p>
+            </article>
+            <article class="value-card reveal delay-1">
+              <h3>Preciznost</h3>
+              <p>Posebna pažnja ide obliku, zanokticama, tankom nanosu i završnoj liniji boje.</p>
+            </article>
+            <article class="value-card reveal delay-2">
+              <h3>Stil</h3>
+              <p>Od neutralnih tonova do detalja u trendu, predlog uvek prilagođavamo klijentkinji.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow" style="color: #ffd5e4">Upoznajmo se</p>
+            <h2>Rezervišite prvi termin i <span class="script" style="color: #ffd5e4">osetite</span> razliku.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="kontakt.html">Zakaži termin</a>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container footer-layout"><a class="footer-brand" href="index.html">Nails by Tea</a><div class="footer-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="kontakt.html">Kontakt</a></div></div></footer>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div>
+          <a class="footer-brand" href="index.html">Nails by Tea</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
