@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giša Barbershop – Zrenjanin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader-mark"></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+          <circle cx="7" cy="6" r="4" stroke="white" stroke-width="2" />
+          <circle cx="7" cy="26" r="4" stroke="white" stroke-width="2" />
+          <line x1="10" y1="9" x2="24" y2="16" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <line x1="10" y1="23" x2="24" y2="16" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="nav-logo-text">Giša <span>Barbershop</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">O nama</a></li>
+      <li><a href="#services">Usluge</a></li>
+      <li><a href="#gallery">Radovi</a></li>
+      <li><a href="#team">Tim</a></li>
+      <li><a href="#reviews">Utisci</a></li>
+      <li><a href="#contact" class="nav-cta">Zakaži</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Meni">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#about">O nama</a>
+    <a href="#services">Usluge</a>
+    <a href="#gallery">Radovi</a>
+    <a href="#team">Tim</a>
+    <a href="#reviews">Utisci</a>
+    <a href="#contact">Zakaži termin</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>Zrenjanin · od 2010.</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="line-red">GIŠA BARBERSHOP</span>
+        <span class="line-normal">Klasično</span>
+        <span class="line-outline">i precizno</span>
+      </h1>
+      <p class="hero-desc">
+        Kod Giše se ne žuri. Sedneš, kažeš šta te muči, i izađeš
+        sređen kako treba — bez friziranja po šablonu i bez
+        "može i ovako" kad si tražio nešto sasvim drugo.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Zakaži termin</a>
+        <a href="#services" class="btn-outline">Pogledaj usluge</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="15" data-suffix="+">0</div>
+          <div class="hero-stat-label">Godina iskustva</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="5000" data-suffix="+">0</div>
+          <div class="hero-stat-label">Zadovoljnih klijenata</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="4.9" data-prefix="★ " data-decimal="true">0</div>
+          <div class="hero-stat-label">Prosečna ocena</div>
+        </div>
+      </div>
+    </div>
+    <div class="barber-pole-wrap">
+      <div class="barber-pole">
+        <div class="pole-cap top"></div>
+        <div class="pole-inner"></div>
+        <div class="pole-cap bottom"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Skroluj</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-frame">
+            <div class="img-placeholder is-wide silhouette-person" role="img"
+              aria-label="Placeholder fotografije salona">
+              <svg viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="38" r="22" fill="currentColor" />
+                <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+          <div class="about-frame-accent"></div>
+          <div class="about-badge">
+            <div class="about-badge-num">15</div>
+            <div class="about-badge-text">Godina tradicije</div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-eyebrow">
+            <div class="section-eyebrow-line"></div>
+            <span>Ko smo mi</span>
+          </div>
+          <h2 class="section-title">Berbernica koja nije<br>otvorena slučajno</h2>
+          <p>Giša je otvorio radnju 2010. godine s jednom idejom u glavi — da
+            muškarci u Zrenjaninu imaju mesto gde se ne žuri i gde se šišanje ne
+            radi na brzaka. Petnaest godina kasnije, ta ideja i dalje stoji.</p>
+          <p>Nema kod nas reda kao na šalteru i nema da te neko šiša dok gleda
+            u sat. Svaki klijent koji sedne u stolicu dobije punu pažnju, od
+            prve reči o fazonu do zadnjeg poteza makazama. Adresa nam je Glavna
+            bb, ali dolaze nam ljudi i sa drugog kraja grada, pa i iz okolnih sela.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">✂</div>
+              <div class="about-feature-text">Precizno šišanje</div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🪒</div>
+              <div class="about-feature-text">Brijanje britvom</div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">💈</div>
+              <div class="about-feature-text">Klasičan zanat</div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">⭐</div>
+              <div class="about-feature-text">Kvalitetni proizvodi</div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">⏱</div>
+              <div class="about-feature-text">Bez čekanja</div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🤝</div>
+              <div class="about-feature-text">Klijenti se vraćaju</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="reveal">
+          <div class="section-eyebrow">
+            <div class="section-eyebrow-line"></div><span>Šta nudimo</span>
+          </div>
+          <h2 class="section-title">Usluge i cene</h2>
+        </div>
+        <p class="reveal section-desc">Bez skrivenih troškova, bez paketa koji nisi tražio. Čisto i jasno — znaš šta
+          dobijaš.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal delay-1">
+          <div class="service-num">01</div>
+          <div class="service-icon">✂</div>
+          <div class="service-name">Šišanje</div>
+          <div class="service-desc">Mašinom i makazama, fazon koji nosiš ili nešto novo ako se odlučiš na licu mesta.
+            Pre nego što počnemo, pričamo šta ti treba.</div>
+          <div class="service-price-row"><span class="service-price">1.000</span><span
+              class="service-price-sub">RSD</span></div>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-num">02</div>
+          <div class="service-icon">🪒</div>
+          <div class="service-name">Brijanje</div>
+          <div class="service-desc">Topli peškir, sapunica, britva — onako kako se to radilo i radi se i dalje. Koža ti
+            je glatka kao da je nikad nije ni dotakla mašinica.</div>
+          <div class="service-price-row"><span class="service-price">800</span><span
+              class="service-price-sub">RSD</span></div>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-num">03</div>
+          <div class="service-icon">🧔</div>
+          <div class="service-name">Oblikovanje brade</div>
+          <div class="service-desc">Brada koja samo raste i brada koja stoji kako treba — to su dve različite stvari.
+            Sredimo liniju i konturu da prati tvoje lice, ne da je nasilno nabačena.</div>
+          <div class="service-price-row"><span class="service-price">600</span><span
+              class="service-price-sub">RSD</span></div>
+        </div>
+        <div class="service-card reveal delay-4">
+          <div class="service-num">04</div>
+          <div class="service-icon">✨</div>
+          <div class="service-name">Šišanje + Brada</div>
+          <div class="service-desc">Šišanje i brada u istoj poseti, da ne moraš da dolaziš dvaput. Izlaziš odavde sređen
+            od glave do brade, spreman za bilo šta.</div>
+          <div class="service-price-row"><span class="service-price">1.500</span><span
+              class="service-price-sub">RSD</span></div>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-num">05</div>
+          <div class="service-icon">🧴</div>
+          <div class="service-name">Tretman kose</div>
+          <div class="service-desc">Dubinsko pranje i masaža glave, za kosu kojoj treba malo nege i za glavu kojoj treba
+            malo mira. Dobro dođe i kad ne planiraš šišanje.</div>
+          <div class="service-price-row"><span class="service-price">700</span><span
+              class="service-price-sub">RSD</span></div>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-num">06</div>
+          <div class="service-icon">💎</div>
+          <div class="service-name">VIP Paket</div>
+          <div class="service-desc">Šišanje, brijanje, masaža glave i doterivanje na kraju — sve u jednom terminu. Za
+            slavu, venčanje, ili kad prosto hoćeš da se ispoštuješ.</div>
+          <div class="service-price-row"><span class="service-price">2.200</span><span
+              class="service-price-sub">RSD</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <div class="section-eyebrow-line"></div><span>Naši radovi</span>
+        </div>
+        <h2 class="section-title">Iz salona, direktno</h2>
+        <p class="section-desc">Ovo radimo svaki dan, u svakoj stolici. Prevuci da vidiš fazone koje pravimo.</p>
+      </div>
+    </div>
+    <div class="gallery-hint reveal"><span>Prevuci za više</span><span class="gallery-hint-arrow">→</span></div>
+    <div class="gallery-scroll-wrap" id="galleryScroll">
+      <div class="gallery-track">
+        <div class="gallery-item">
+          <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+              <circle cx="50" cy="38" r="22" fill="currentColor" />
+              <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+            </svg></div>
+          <div class="gallery-item-label">Classic Fade</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder scene-placeholder"><svg viewBox="0 0 100 100" fill="none">
+              <path d="M30 20L70 80M70 20L30 80" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+              <circle cx="26" cy="20" r="9" stroke="currentColor" stroke-width="4" />
+              <circle cx="26" cy="80" r="9" stroke="currentColor" stroke-width="4" />
+            </svg></div>
+          <div class="gallery-item-label">Taper Cut</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+              <circle cx="50" cy="38" r="22" fill="currentColor" />
+              <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+            </svg></div>
+          <div class="gallery-item-label">Brada i stil</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder scene-placeholder"><svg viewBox="0 0 100 100" fill="none">
+              <path d="M20 50C20 35 30 25 50 25C70 25 80 35 80 50" stroke="currentColor" stroke-width="4"
+                stroke-linecap="round" />
+              <rect x="15" y="50" width="70" height="8" rx="4" fill="currentColor" />
+              <path d="M50 58V78" stroke="currentColor" stroke-width="4" />
+            </svg></div>
+          <div class="gallery-item-label">Britva i brijanje</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+              <circle cx="50" cy="38" r="22" fill="currentColor" />
+              <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+            </svg></div>
+          <div class="gallery-item-label">Undercut</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder scene-placeholder"><svg viewBox="0 0 100 100" fill="none">
+              <path d="M30 20L70 80M70 20L30 80" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+              <circle cx="26" cy="20" r="9" stroke="currentColor" stroke-width="4" />
+              <circle cx="26" cy="80" r="9" stroke="currentColor" stroke-width="4" />
+            </svg></div>
+          <div class="gallery-item-label">Skin Fade</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+              <circle cx="50" cy="38" r="22" fill="currentColor" />
+              <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+            </svg></div>
+          <div class="gallery-item-label">Klasično šišanje</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-placeholder scene-placeholder"><svg viewBox="0 0 100 100" fill="none">
+              <path d="M20 50C20 35 30 25 50 25C70 25 80 35 80 50" stroke="currentColor" stroke-width="4"
+                stroke-linecap="round" />
+              <rect x="15" y="50" width="70" height="8" rx="4" fill="currentColor" />
+              <path d="M50 58V78" stroke="currentColor" stroke-width="4" />
+            </svg></div>
+          <div class="gallery-item-label">Salon, atmosfera</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <div class="section-eyebrow-line"></div><span>Naš tim</span>
+        </div>
+        <h2 class="section-title">Majstori zanata</h2>
+        <p class="section-desc">Svako od nas donosi nešto drugačije, ali svi delimo istu stvar — ljubav prema dobro
+          odrađenom poslu.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal delay-1">
+          <div class="team-avatar">
+            <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+                <circle cx="50" cy="38" r="22" fill="currentColor" />
+                <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+              </svg></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Giša</div>
+            <div class="team-role">Vlasnik &amp; Majstor</div>
+            <div class="team-bio">Petnaest godina drži makaze u ruci kao prvog dana. Osnivač salona, neprikosnoven u
+              klasici, i čovek koji prvo sasluša pa onda šiša.</div>
+          </div>
+        </div>
+        <div class="team-card reveal delay-2">
+          <div class="team-avatar">
+            <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+                <circle cx="50" cy="38" r="22" fill="currentColor" />
+                <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+              </svg></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Marko</div>
+            <div class="team-role">Frizer za moderne fazone</div>
+            <div class="team-bio">Fade, krop, sve što vidiš na Instagramu — Marko to ume da prenese u delo. Mlađi u ekipi, ali ruka mu je sigurna.</div>
+          </div>
+        </div>
+        <div class="team-card reveal delay-3">
+          <div class="team-avatar">
+            <div class="img-placeholder silhouette-person"><svg viewBox="0 0 100 130" fill="none">
+                <circle cx="50" cy="38" r="22" fill="currentColor" />
+                <path d="M8 132C8 95 25 78 50 78C75 78 92 95 92 132H8Z" fill="currentColor" />
+              </svg></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Stefan</div>
+            <div class="team-role">Specijalista za bradu</div>
+            <div class="team-bio">Šta god imaš ispod nosa, Stefan zna kako da to sredi i da stoji tačno tamo gde treba.
+              Linija, kontura, brada — njegova fora.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <div class="section-eyebrow-line"></div><span>Šta klijenti kažu</span>
+        </div>
+        <h2 class="section-title">Reči koje pamtimo</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal delay-1">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Dolazim kod Giše već šest godina. Svaki put isto — sednem, ispričam šta hoću, i
+            ustanem zadovoljan. Nema žurbe, nema kompromisa. Pravo mesto.</div>
+          <div class="review-author">
+            <div class="review-avatar">N</div>
+            <div>
+              <div class="review-name">Nikola P.</div>
+              <div class="review-date">Pre mesec dana</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-2">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Probao sam par mesta u Zrenjaninu, i otkad sam našao Gišu — nema premeštanja. Stefan
+            sa bradom radi pravu magiju, ozbiljno vam kažem.</div>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-name">Miloš T.</div>
+              <div class="review-date">Pre 2 nedelje</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-3">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Sinu imam 8 godina i ne ide nigde drugo. Marko mu uvek napravi taman onako kako on
+            hoće, a to nije lak posao kad su deca u pitanju. Svaka čast ekipi.</div>
+          <div class="review-author">
+            <div class="review-avatar">D</div>
+            <div>
+              <div class="review-name">Dragan V.</div>
+              <div class="review-date">Pre 3 nedelje</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-4">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Išao sam na venčanje i rekao im neka me srede da izgledam za milion dinara. Izašao
+            sam tačno tako. Znaju posao, ne moraš ništa dva puta da objašnjavaš.</div>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div>
+              <div class="review-name">Aleksandar K.</div>
+              <div class="review-date">Pre mesec dana</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-2">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Atmosfera u salonu je nešto posebno. Stara muzika, dobar razgovor, nema žurbe.
+            Šišanje je bonus — to je i malo odmora od svega.</div>
+          <div class="review-author">
+            <div class="review-avatar">V</div>
+            <div>
+              <div class="review-name">Vladimir M.</div>
+              <div class="review-date">Pre 5 dana</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-3">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Giša ima ono što retko koji frizer ima — strpljenje i preciznost. Radi sa lakoćom i
+            zna šta radi. Preporučio sam ga svim drugarima.</div>
+          <div class="review-author">
+            <div class="review-avatar">B</div>
+            <div>
+              <div class="review-name">Bojan R.</div>
+              <div class="review-date">Pre nedelju dana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <div class="section-eyebrow-line"></div><span>Kontakt</span>
+        </div>
+        <h2 class="section-title">Zakaži termin</h2>
+        <p class="section-desc">Ima slobodnih termina. Popuni formu, javljamo se za sat vremena, najviše.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Pronađi nas</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Adresa</div>
+              <div class="contact-item-value">Glavna bb, Zrenjanin</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Telefon</div>
+              <div class="contact-item-value"><a href="tel:+381600000000">+381 60 000 0000</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📱</div>
+            <div>
+              <div class="contact-item-label">WhatsApp / Viber</div>
+              <div class="contact-item-value"><a href="https://wa.me/381600000000">Piši direktno</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:gisa@barbershop.rs">gisa@barbershop.rs</a></div>
+            </div>
+          </div>
+          <div class="contact-hours">
+            <h4>Radno vreme</h4>
+            <div class="hours-row"><span>Ponedeljak – Petak</span><span class="hours-open">09:00 – 20:00</span></div>
+            <div class="hours-row"><span>Subota</span><span class="hours-open">09:00 – 17:00</span></div>
+            <div class="hours-row"><span>Nedelja</span><span class="hours-closed">Zatvoreno</span></div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              Instagram
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.18 8.18 0 004.78 1.52V6.79a4.85 4.85 0 01-1.01-.1z" />
+              </svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+        <div class="contact-form reveal-right">
+          <h3>Pošalji zahtev</h3>
+          <div class="form-row">
+            <div class="form-group"><label for="fname">Ime i prezime</label><input type="text" id="fname"
+                placeholder="Marko Marković"></div>
+            <div class="form-group"><label for="fphone">Telefon</label><input type="tel" id="fphone"
+                placeholder="+381 60 ..."></div>
+          </div>
+          <div class="form-group"><label for="femail">Email (opciono)</label><input type="email" id="femail"
+              placeholder="marko@email.com"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fservice">Usluga</label>
+              <select id="fservice">
+                <option value="">Izaberi uslugu</option>
+                <option>Šišanje – 1.000 RSD</option>
+                <option>Brijanje – 800 RSD</option>
+                <option>Oblikovanje brade – 600 RSD</option>
+                <option>Šišanje + Brada – 1.500 RSD</option>
+                <option>Tretman kose – 700 RSD</option>
+                <option>VIP Paket – 2.200 RSD</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fbarber">Majstor (opciono)</label>
+              <select id="fbarber">
+                <option value="">Svejedno mi je</option>
+                <option>Giša</option>
+                <option>Marko</option>
+                <option>Stefan</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="fdate">Željeni datum</label><input type="date" id="fdate"></div>
+            <div class="form-group">
+              <label for="ftime">Željeno vreme</label>
+              <select id="ftime">
+                <option value="">Izaberi</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label for="fnote">Napomena (opciono)</label><textarea id="fnote"
+              placeholder="Napiši ako imaš posebne zahteve ili reference..."></textarea></div>
+          <button class="form-submit" id="formSubmit">Zakaži termin →</button>
+          <div class="form-success" id="formSuccess">✓ Primili smo tvoj zahtev! Javićemo ti se uskoro.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <div class="map-section">
+    <div class="map-placeholder">
+      <div class="map-pin">📍</div>
+      <p>Giša Barbershop · Glavna bb, Zrenjanin</p>
+      <a href="https://maps.google.com/?q=Zrenjanin" target="_blank" class="btn-outline">Otvori Google Maps →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-icon">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+              <circle cx="7" cy="6" r="4" stroke="white" stroke-width="2" />
+              <circle cx="7" cy="26" r="4" stroke="white" stroke-width="2" />
+              <line x1="10" y1="9" x2="24" y2="16" stroke="white" stroke-width="2" stroke-linecap="round" />
+              <line x1="10" y1="23" x2="24" y2="16" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="nav-logo-text">Giša <span>Barbershop</span></div>
+        </div>
+        <p>Klasični muški frizerski salon u srcu Zrenjanina. Od 2010. godine, isti kvalitet, isti zanat — samo
+          iskusniji.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigacija</h5>
+        <ul>
+          <li><a href="#about">O nama</a></li>
+          <li><a href="#services">Usluge</a></li>
+          <li><a href="#gallery">Radovi</a></li>
+          <li><a href="#team">Tim</a></li>
+          <li><a href="#reviews">Utisci</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Usluge</h5>
+        <ul>
+          <li><a href="#services">Šišanje</a></li>
+          <li><a href="#services">Brijanje</a></li>
+          <li><a href="#services">Oblikovanje brade</a></li>
+          <li><a href="#services">Tretman kose</a></li>
+          <li><a href="#services">VIP Paket</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="tel:+381600000000">+381 60 000 0000</a></li>
+          <li><a href="mailto:gisa@barbershop.rs">gisa@barbershop.rs</a></li>
+          <li><a href="#">Glavna bb, Zrenjanin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Giša Barbershop. Sva prava zadržana.</div>
+      <div class="footer-bottom-right">Zrenjanin · Od 2010.</div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Nazad na vrh">↑</button>
+
+  <a href="#contact" class="booking-float">
+    <div class="booking-float-dot"></div>
+    <div>
+      <div class="booking-float-text">Zakaži odmah</div>
+      <div class="booking-float-sub">Slobodni termini dostupni</div>
+    </div>
+  </a>
+
+  <a class="gf-back-link" href="../../index.html" aria-label="Nazad na GridForge Studio portfolio">
+  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="16" height="16">
+    <path d="M12 5L7 10l5 5" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>GridForge Studio</span>
+</a>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
