@@ -7,13 +7,15 @@ const scrollLinks = document.querySelectorAll('a[href^="#"]');
 const revealItems = document.querySelectorAll(".reveal");
 
 const closeNavigation = () => {
-  document.body.classList.remove("nav-open");
+  document.body.classList.remove("gf-nav-open");
+  nav?.classList.remove("is-open");
   navToggle?.setAttribute("aria-expanded", "false");
 };
 
 navToggle?.addEventListener("click", () => {
-  const isOpen = document.body.classList.toggle("nav-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+  const isOpen = nav?.classList.toggle("is-open");
+  document.body.classList.toggle("gf-nav-open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
 });
 
 scrollLinks.forEach((link) => {
